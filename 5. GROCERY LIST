@@ -1,0 +1,43 @@
+
+//BRO CODE - credits - ep 40
+
+#include <iostream>
+#include <string> //pentru a functiona string-urile, cuvinte
+#include <ctime> //random number rand()
+
+using namespace std;
+
+int main() {
+
+	cout << "************************************\n";
+	cout << "***** LISTA TA DE CUMPARATURI ******\n";
+	cout << "************************************\n";
+
+	string cumparaturi[50];
+	int size = sizeof(cumparaturi) / sizeof(cumparaturi[0]);
+	string temp;  //memoria temporara pentru a nu ramane q in lista
+
+	for (int i = 0; i < size; i++) {
+		cout << "Introdu ce vrei sa cumperi sau 'q' pentru a parasi lista de cumparaturi: ";
+		getline(cin, temp);
+		if (temp == "q") {
+			break;
+		}
+		else {
+			cumparaturi[i] = temp;
+		}
+	}
+
+	cout << "*************************************\n";
+	cout << "Trebuie sa cumperi urmatoarele produse: \n";
+
+	for (int i = 0; !cumparaturi[i].empty();i++) {
+		cout << "-> " << cumparaturi[i] << '\n';
+	}
+
+	cout << "************************************\n";
+	cout << "***** !HAI,FUGA LA MAGAZIN! ******\n";
+	cout << "************************************\n";
+
+	return 0;
+}
