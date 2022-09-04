@@ -1,0 +1,61 @@
+
+//Calculator 04.09.2022 - (la inceput de drum)
+// repetarea switch case-urilor
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int adunareNum(int num1, int num2);
+int scadereNum(int num1, int num2);
+
+
+int main(){
+
+    int num1, num2;
+    cout << "************************************\n";
+    cout << "*********CALCULATOR by Robert*******\n";
+
+    cout << "Introdu primul numar> ";
+    cin >> num1;
+    cout << "Introdu al doile numar> ";
+    cin >> num2;
+    cout << "Calculatorul are urmatoarele optiuni : \n";
+    cout << "1. Adunare\n";
+    cout << "2. Scadere\n";
+    cout << "3. EXIT";
+    cout << "Alege operatia pe care doresti sa o executi (1-2): ";
+
+    char raspuns;
+    cin >> raspuns;
+
+    do{
+        switch(raspuns){
+            case '1':
+                cout << "Rezultatul tau este: " << adunareNum(num1, num2) << '\n';
+                break;
+            case '2':
+                cout << "Rezultatul tau este: " << scadereNum(num1, num2) << '\n';
+                break;
+            case '3':
+                cout << "paaaa";
+                break;
+            default: cout << "Nu exista aceasta optiune";
+        }
+    }while( raspuns != 3);
+
+    return 0;
+}
+
+// Daca avem declarat in paranteze o variabila nu o declaram iar
+
+int adunareNum(int num1, int num2){
+    int rez = num1 + num2;
+    return rez;
+}
+int scadereNum(int num1, int num2){
+    int rez = num1 - num2;
+    return rez;
+}
+
+
