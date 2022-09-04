@@ -1,0 +1,35 @@
+
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main(){
+    int num1, num2;
+   
+    cout << "Introdu primul numar: ";
+        cin >> num1;
+    cout << "Introdu al doilea numar: ";
+        cin >> num2;
+    
+    int optiune;
+    cout << "Introdu operatiunea dorita (1- MAX, 2- MIN) : ";
+    cin >> optiune;
+
+    if( optiune == 1){
+        cout << "Numarul maxim este : " << max(num1, num2);
+    }
+    else if( optiune == 0){
+        cout << "Numarul minim este: " << min(num1, num2);
+    }
+    else{
+        cout << "Nu ai ales nici o optiune! ";
+    }
+
+   
+    return 0;
+}
+
+
