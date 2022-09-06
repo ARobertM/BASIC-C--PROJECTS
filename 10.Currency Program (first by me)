@@ -1,0 +1,79 @@
+//currency convertor - RObert - 06.09.2022
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std;
+
+void meniu();
+
+int main()
+{
+
+  char ch;
+  double num;
+  double rez;
+  meniu();
+  do
+    {
+      cin >> ch;
+      switch (ch)
+	{
+	case '1':
+	    cout << "Enter the sum amount (LEI) : ";
+        cin >> num;
+        rez = num / 4.81;
+	    cout << "You converted in " << rez << "EURO\n";
+	    break;
+	case '2':
+	    cout << "Enter the sum amount (EURO) : ";
+        cin >> num;
+        rez = num * 4.81;
+	    cout << "You converted in " << rez << "LEI\n";
+	    break;
+	case '3':
+	    cout << "Enter the sum amount (LEI) : ";
+        cin >> num;
+        rez = num / 4.89;
+	    cout << "You converted in " << rez << "DOLAR\n";
+	    break;
+	case '4':
+	    cout << "Enter the sum amount (DOLAR) : ";
+        cin >> num;
+        rez = num * 4.89;
+	    cout << "You converted in " << rez << "LEI\n";
+	    break;
+	case '5':
+	    cout << "Good Bye ! :D\n";
+	    return -1;
+	    
+	 default:
+	    cout << "This option dosen't exist ! :D\n";
+	    break;
+	};
+
+
+    }
+  while (ch != '5');
+  return 0;
+}
+
+void meniu ()
+{
+  cout << '\n';
+  cout << "*****************\n";
+  cout << "***----  CURRENCY CONVERTOR  ----****\n";
+  cout << "----------made by Robert - 06.09.2022------------\n";
+  cout << "*****************\n";
+  cout << '\n';
+  cout << "The Program have the following options:  \n";
+  cout << "1. LEI - EURO\n";
+  cout << "2. EURO - LEI\n";
+  cout << "3. LEI - DOLAR\n";
+  cout << "4. DOLAR - LEI\n";
+  cout << "5. EXIT / IESIRE\n";
+  cout << '\n';
+  cout << "*****************\n";
+  cout << "Choose an option (1-5) : ";
+}
